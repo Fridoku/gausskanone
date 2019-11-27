@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:gausskanone-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -141,8 +142,6 @@ Wire Wire Line
 Connection ~ 2750 3950
 Wire Wire Line
 	2750 3950 3200 3950
-Wire Wire Line
-	1900 2900 1900 3950
 Wire Wire Line
 	5100 2850 5600 2850
 Wire Wire Line
@@ -322,4 +321,132 @@ Wire Wire Line
 Wire Wire Line
 	6800 2950 6800 3400
 Connection ~ 6800 3400
+$Comp
+L Device:Q_NMOS_DGS Q?
+U 1 1 5DDDD0BC
+P 2000 5700
+F 0 "Q?" H 2206 5654 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 2206 5745 50  0000 L CNN
+F 2 "" H 2200 5800 50  0001 C CNN
+F 3 "~" H 2000 5700 50  0001 C CNN
+	1    2000 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5DDDD27D
+P 1250 5450
+F 0 "C?" H 1365 5496 50  0000 L CNN
+F 1 "C" H 1365 5405 50  0000 L CNN
+F 2 "" H 1288 5300 50  0001 C CNN
+F 3 "~" H 1250 5450 50  0001 C CNN
+	1    1250 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DDDD36E
+P 1500 5200
+F 0 "R?" V 1293 5200 50  0000 C CNN
+F 1 "R" V 1384 5200 50  0000 C CNN
+F 2 "" V 1430 5200 50  0001 C CNN
+F 3 "~" H 1500 5200 50  0001 C CNN
+	1    1500 5200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2050 4150 1900 4150
+$Comp
+L power:+12V #PWR?
+U 1 1 5DDDF4C2
+P 3400 4400
+F 0 "#PWR?" H 3400 4250 50  0001 C CNN
+F 1 "+12V" H 3415 4573 50  0000 C CNN
+F 2 "" H 3400 4400 50  0001 C CNN
+F 3 "" H 3400 4400 50  0001 C CNN
+	1    3400 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 4550 3400 4500
+$Comp
+L Device:C C?
+U 1 1 5DDE0572
+P 3400 4700
+F 0 "C?" H 3515 4746 50  0000 L CNN
+F 1 "C" H 3515 4655 50  0000 L CNN
+F 2 "" H 3438 4550 50  0001 C CNN
+F 3 "~" H 3400 4700 50  0001 C CNN
+	1    3400 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DDE0649
+P 1900 6250
+F 0 "#PWR?" H 1900 6000 50  0001 C CNN
+F 1 "GND" H 1905 6077 50  0000 C CNN
+F 2 "" H 1900 6250 50  0001 C CNN
+F 3 "" H 1900 6250 50  0001 C CNN
+	1    1900 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 5200 1250 5200
+Wire Wire Line
+	1250 5200 1250 5300
+Wire Wire Line
+	1650 5200 1900 5200
+Connection ~ 1900 5200
+Wire Wire Line
+	1900 5200 1900 5500
+Wire Wire Line
+	1250 5600 1250 6050
+Wire Wire Line
+	1250 6050 1900 6050
+Wire Wire Line
+	1900 6050 1900 5900
+$Comp
+L Device:D_Schottky D?
+U 1 1 5DDE52A6
+P 1900 3400
+F 0 "D?" V 1854 3479 50  0000 L CNN
+F 1 "D_Schottky" V 1945 3479 50  0000 L CNN
+F 2 "" H 1900 3400 50  0001 C CNN
+F 3 "~" H 1900 3400 50  0001 C CNN
+	1    1900 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 3950 1900 3550
+Wire Wire Line
+	1900 3250 1900 2900
+Wire Wire Line
+	1900 4150 1900 5200
+Wire Wire Line
+	3050 4150 3050 4500
+Wire Wire Line
+	3050 4500 3400 4500
+Wire Wire Line
+	2450 4150 3050 4150
+Connection ~ 3400 4500
+Wire Wire Line
+	3400 4500 3400 4400
+Wire Wire Line
+	1900 6250 1900 6050
+Connection ~ 1900 6050
+Wire Wire Line
+	1900 6050 3400 6050
+Wire Wire Line
+	3400 4850 3400 6050
+Wire Notes Line
+	1650 4900 1650 5600
+Wire Notes Line
+	1650 5600 1050 5600
+Wire Notes Line
+	1050 5600 1050 4900
+Wire Notes Line
+	1050 4900 1650 4900
+Text Notes 1650 4900 2    50   ~ 0
+RC Snubber\n
 $EndSCHEMATC
