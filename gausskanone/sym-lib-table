@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name gausskanone-rescue)(type Legacy)(uri ${KIPRJMOD}/gausskanone-rescue.lib)(options "")(descr ""))
+  (lib (name gausskanone)(type Legacy)(uri /home/fkutterer/Projects/gausskanone/gausskanone/gausskanone.lib)(options "")(descr ""))
+)
