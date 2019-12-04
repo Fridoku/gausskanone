@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:gausskanone-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -126,8 +126,6 @@ Wire Wire Line
 	8800 1650 8800 1500
 Wire Wire Line
 	9400 1200 9400 1050
-Wire Wire Line
-	9400 1050 8800 1050
 Connection ~ 8800 1050
 Wire Wire Line
 	8800 1050 8800 1200
@@ -311,7 +309,7 @@ Wire Wire Line
 Wire Wire Line
 	9950 2100 10800 2100
 $Comp
-L gausskanone:TPS4021 U?
+L gausskanone-rescue:TPS4021-gausskanone U?
 U 1 1 5DE7CF3D
 P 2750 5300
 F 0 "U?" H 3225 5525 50  0000 C CNN
@@ -917,17 +915,6 @@ Connection ~ 13550 6750
 Wire Wire Line
 	13550 6750 13550 6650
 $Comp
-L Regulator_Switching:CRE1S0305S3C U3
-U 1 1 5DD55B9B
-P 11000 2850
-F 0 "U3" V 11046 2520 50  0000 R CNN
-F 1 "IE1224S" V 10955 2520 50  0000 R CNN
-F 2 "" H 11000 2450 50  0001 C CNN
-F 3 "" H 11000 2350 50  0001 C CNN
-	1    11000 2850
-	0    -1   -1   0   
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 5DFF2169
 P 11200 3500
@@ -1243,4 +1230,362 @@ Wire Wire Line
 	10400 5950 10400 5550
 Text Notes 8800 6350 0    50   ~ 0
 System Trigger
+$Comp
+L Isolator_Analog:IL300 U?
+U 1 1 5DF812CB
+P 14200 2850
+F 0 "U?" V 14154 3238 50  0000 L CNN
+F 1 "IL300" V 14245 3238 50  0000 L CNN
+F 2 "" H 13900 3150 50  0001 L CNN
+F 3 "http://www.vishay.com/docs/83622/il300.pdf" H 14000 3250 50  0001 L CNN
+	1    14200 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5DF8CE2D
+P 12400 1050
+F 0 "R?" V 12607 1050 50  0000 C CNN
+F 1 "R" V 12516 1050 50  0000 C CNN
+F 2 "" V 12330 1050 50  0001 C CNN
+F 3 "~" H 12400 1050 50  0001 C CNN
+	1    12400 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8800 1050 9400 1050
+$Comp
+L Device:D_Photo D?
+U 1 1 5DF9DBF5
+P 12700 1650
+F 0 "D?" V 12604 1807 50  0000 L CNN
+F 1 "D_Photo" V 12695 1807 50  0000 L CNN
+F 2 "" H 12650 1650 50  0001 C CNN
+F 3 "~" H 12650 1650 50  0001 C CNN
+	1    12700 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:OP249 U?
+U 1 1 5DF9FA70
+P 13400 1450
+F 0 "U?" H 13400 1817 50  0000 C CNN
+F 1 "OP249" H 13400 1726 50  0000 C CNN
+F 2 "" H 13400 1450 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 13400 1450 50  0001 C CNN
+	1    13400 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12550 1050 12700 1050
+Wire Wire Line
+	12700 1050 12700 1450
+Wire Wire Line
+	12700 1050 12950 1050
+Connection ~ 12700 1050
+$Comp
+L Device:C C?
+U 1 1 5DFBE4E1
+P 13300 1050
+F 0 "C?" V 13048 1050 50  0000 C CNN
+F 1 "C" V 13139 1050 50  0000 C CNN
+F 2 "" H 13338 900 50  0001 C CNN
+F 3 "~" H 13300 1050 50  0001 C CNN
+	1    13300 1050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	12950 1050 12950 1350
+Wire Wire Line
+	12950 1350 13100 1350
+Connection ~ 12950 1050
+Wire Wire Line
+	12950 1050 13150 1050
+Wire Wire Line
+	11200 2200 11250 2200
+Wire Wire Line
+	12700 1750 12700 1900
+Wire Wire Line
+	12700 1900 12950 1900
+Wire Wire Line
+	12950 1900 12950 1550
+Wire Wire Line
+	12950 1550 13100 1550
+Connection ~ 12700 1900
+Wire Wire Line
+	12700 1900 12700 2200
+Wire Wire Line
+	13450 1050 13850 1050
+Wire Wire Line
+	13850 1050 13850 1450
+Wire Wire Line
+	13850 1450 13700 1450
+$Comp
+L Device:R R?
+U 1 1 5E03FDF9
+P 14100 1450
+F 0 "R?" V 13893 1450 50  0000 C CNN
+F 1 "R" V 13984 1450 50  0000 C CNN
+F 2 "" V 14030 1450 50  0001 C CNN
+F 3 "~" H 14100 1450 50  0001 C CNN
+	1    14100 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13850 1450 13950 1450
+Connection ~ 13850 1450
+$Comp
+L Regulator_Switching:CRE1S0305S3C U3
+U 1 1 5DD55B9B
+P 11000 2850
+F 0 "U3" V 11046 2520 50  0000 R CNN
+F 1 "IE1212S" V 10955 2520 50  0000 R CNN
+F 2 "" H 11000 2450 50  0001 C CNN
+F 3 "" H 11000 2350 50  0001 C CNN
+	1    11000 2850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 1050 10900 1050
+Wire Wire Line
+	10900 1050 10900 600 
+Wire Wire Line
+	10900 600  11250 600 
+Connection ~ 9400 1050
+$Comp
+L Device:R R?
+U 1 1 5E09964C
+P 11250 800
+F 0 "R?" H 11320 846 50  0000 L CNN
+F 1 "R" H 11320 755 50  0000 L CNN
+F 2 "" V 11180 800 50  0001 C CNN
+F 3 "~" H 11250 800 50  0001 C CNN
+	1    11250 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5E09A55B
+P 11250 1350
+F 0 "R?" H 11320 1396 50  0000 L CNN
+F 1 "R" H 11320 1305 50  0000 L CNN
+F 2 "" V 11180 1350 50  0001 C CNN
+F 3 "~" H 11250 1350 50  0001 C CNN
+	1    11250 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E0B6057
+P 9950 2100
+F 0 "#PWR?" H 9950 1950 50  0001 C CNN
+F 1 "+12V" H 9965 2273 50  0000 C CNN
+F 2 "" H 9950 2100 50  0001 C CNN
+F 3 "" H 9950 2100 50  0001 C CNN
+	1    9950 2100
+	1    0    0    -1  
+$EndComp
+Connection ~ 9950 2100
+Wire Wire Line
+	11250 600  11250 650 
+Wire Wire Line
+	11250 1500 11250 2200
+Connection ~ 11250 2200
+$Comp
+L Amplifier_Operational:OP249 U?
+U 1 1 5E0EE948
+P 11800 1050
+F 0 "U?" H 11800 1417 50  0000 C CNN
+F 1 "OP249" H 11800 1326 50  0000 C CNN
+F 2 "" H 11800 1050 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 11800 1050 50  0001 C CNN
+	1    11800 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11250 950  11250 1200
+Wire Wire Line
+	11250 950  11500 950 
+Connection ~ 11250 950 
+Wire Wire Line
+	12100 1050 12150 1050
+Wire Wire Line
+	11250 2200 12700 2200
+Wire Wire Line
+	11500 1150 11500 1650
+Wire Wire Line
+	11500 1650 12150 1650
+Wire Wire Line
+	12150 1650 12150 1050
+Connection ~ 12150 1050
+Wire Wire Line
+	12150 1050 12250 1050
+Wire Wire Line
+	12700 1450 13050 1450
+Wire Wire Line
+	13050 1450 13050 2400
+Wire Wire Line
+	13050 2400 14100 2400
+Wire Wire Line
+	14100 2400 14100 2550
+Connection ~ 12700 1450
+Wire Wire Line
+	12700 2200 12700 2500
+Wire Wire Line
+	12700 2500 13900 2500
+Wire Wire Line
+	13900 2500 13900 2550
+Connection ~ 12700 2200
+$Comp
+L Device:D D?
+U 1 1 5E19A7C7
+P 13400 3850
+F 0 "D?" V 13354 3929 50  0000 L CNN
+F 1 "D" V 13445 3929 50  0000 L CNN
+F 2 "" H 13400 3850 50  0001 C CNN
+F 3 "~" H 13400 3850 50  0001 C CNN
+	1    13400 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13400 4000 13050 4000
+Wire Wire Line
+	13400 4000 13400 4100
+Connection ~ 13400 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5E1CE96C
+P 13400 4100
+F 0 "#PWR?" H 13400 3850 50  0001 C CNN
+F 1 "GND" H 13405 3927 50  0000 C CNN
+F 2 "" H 13400 4100 50  0001 C CNN
+F 3 "" H 13400 4100 50  0001 C CNN
+	1    13400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5E04EA56
+P 14400 1200
+F 0 "D?" V 14446 1121 50  0000 R CNN
+F 1 "D" V 14355 1121 50  0000 R CNN
+F 2 "" H 14400 1200 50  0001 C CNN
+F 3 "~" H 14400 1200 50  0001 C CNN
+	1    14400 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5E061E6A
+P 14400 1000
+F 0 "#PWR?" H 14400 850 50  0001 C CNN
+F 1 "+12V" H 14415 1173 50  0000 C CNN
+F 2 "" H 14400 1000 50  0001 C CNN
+F 3 "" H 14400 1000 50  0001 C CNN
+	1    14400 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14400 1050 14400 1000
+Wire Wire Line
+	14400 1050 14300 1050
+Wire Wire Line
+	14300 1050 14300 2550
+Connection ~ 14400 1450
+Wire Wire Line
+	14500 1450 14500 2550
+Wire Wire Line
+	14400 1450 14500 1450
+Wire Wire Line
+	14400 1450 14400 1350
+Wire Wire Line
+	14250 1450 14400 1450
+$Comp
+L Amplifier_Operational:OP249 U?
+U 1 1 5E2071DA
+P 14050 3900
+F 0 "U?" H 14050 4267 50  0000 C CNN
+F 1 "OP249" H 14050 4176 50  0000 C CNN
+F 2 "" H 14050 3900 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 14050 3900 50  0001 C CNN
+	1    14050 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13400 4000 13750 4000
+Wire Wire Line
+	13400 3700 13750 3700
+Wire Wire Line
+	13750 3700 13750 3800
+Connection ~ 13400 3700
+Wire Wire Line
+	13750 3700 14100 3700
+Connection ~ 13750 3700
+$Comp
+L Device:C C?
+U 1 1 5E242022
+P 14250 3700
+F 0 "C?" V 13998 3700 50  0000 C CNN
+F 1 "C" V 14089 3700 50  0000 C CNN
+F 2 "" H 14288 3550 50  0001 C CNN
+F 3 "~" H 14250 3700 50  0001 C CNN
+	1    14250 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14400 3700 14750 3700
+Wire Wire Line
+	14750 3700 14750 3900
+Wire Wire Line
+	14750 3900 14350 3900
+Wire Wire Line
+	14750 3900 15000 3900
+Wire Wire Line
+	15000 3900 15000 4700
+Connection ~ 14750 3900
+Text Notes 15100 4550 0    50   ~ 0
+An Arduino\n
+Wire Wire Line
+	14400 3150 14400 3250
+Wire Wire Line
+	14400 3250 13400 3250
+Wire Wire Line
+	13400 3250 13400 3700
+Wire Wire Line
+	14000 3150 14000 3200
+Wire Wire Line
+	14000 3200 13050 3200
+Wire Wire Line
+	13050 3200 13050 4000
+Wire Wire Line
+	13750 3700 13750 3400
+Wire Wire Line
+	13750 3400 14100 3400
+$Comp
+L Device:R R?
+U 1 1 5E35E7F7
+P 14250 3400
+F 0 "R?" V 14043 3400 50  0000 C CNN
+F 1 "R" V 14134 3400 50  0000 C CNN
+F 2 "" V 14180 3400 50  0001 C CNN
+F 3 "~" H 14250 3400 50  0001 C CNN
+	1    14250 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14400 3400 14750 3400
+Wire Wire Line
+	14750 3400 14750 3700
+Connection ~ 14750 3700
+Wire Notes Line
+	11450 1950 12300 1950
+Wire Notes Line
+	12300 1950 12300 600 
+Wire Notes Line
+	12300 600  11450 600 
+Wire Notes Line
+	11450 600  11450 1950
+Connection ~ 14400 1050
+Text Notes 11650 650  0    50   ~ 0
+strombegrenzer\n\n
 $EndSCHEMATC
