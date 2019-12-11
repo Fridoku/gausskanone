@@ -19,7 +19,7 @@ L Device:R_POT RV?
 U 1 1 5E1E79E7
 P 10900 950
 F 0 "RV?" V 10693 950 50  0000 C CNN
-F 1 "R_POT" V 10784 950 50  0000 C CNN
+F 1 "2K" V 10784 950 50  0000 C CNN
 F 2 "" H 10900 950 50  0001 C CNN
 F 3 "~" H 10900 950 50  0001 C CNN
 	1    10900 950 
@@ -68,7 +68,7 @@ F 3 "~" H 14400 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 15250 3550 0    50   ~ 0
-VOUT\n
+VOUT 6V\n\n
 Wire Wire Line
 	14400 3600 15300 3600
 Wire Wire Line
@@ -147,17 +147,6 @@ F 1 "70K" H 12570 1805 50  0000 L CNN
 F 2 "" V 12430 1850 50  0001 C CNN
 F 3 "~" H 12500 1850 50  0001 C CNN
 	1    12500 1850
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:OP249 U?
-U 1 1 5DF6E34D
-P 12950 1150
-F 0 "U?" H 12950 1517 50  0000 C CNN
-F 1 "LT1037" H 12950 1426 50  0000 C CNN
-F 2 "" H 12950 1150 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 12950 1150 50  0001 C CNN
-	1    12950 1150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -416,8 +405,6 @@ Wire Wire Line
 	11050 950  11200 950 
 Connection ~ 9400 1050
 Wire Wire Line
-	10100 950  10750 950 
-Wire Wire Line
 	10100 1050 10100 950 
 Wire Wire Line
 	9400 1050 10100 1050
@@ -532,7 +519,7 @@ L Device:R R6
 U 1 1 5E09A55B
 P 11200 1250
 F 0 "R6" H 11270 1296 50  0000 L CNN
-F 1 "R" H 11270 1205 50  0000 L CNN
+F 1 "2K" H 11270 1205 50  0000 L CNN
 F 2 "" V 11130 1250 50  0001 C CNN
 F 3 "~" H 11200 1250 50  0001 C CNN
 	1    11200 1250
@@ -1586,4 +1573,43 @@ F 3 "~" H 8800 1350 50  0001 C CNN
 	1    8800 1350
 	1    0    0    -1  
 $EndComp
+$Comp
+L Amplifier_Operational:OPA1678 U?
+U 1 1 5E25FF63
+P 12950 1150
+F 0 "U?" H 12950 1517 50  0000 C CNN
+F 1 "OPA1678" H 12950 1426 50  0000 C CNN
+F 2 "" H 12950 1150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1678.pdf" H 12950 1150 50  0001 C CNN
+	1    12950 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA1678 U?
+U 3 1 5E280D7A
+P 15300 1300
+F 0 "U?" H 15258 1346 50  0000 L CNN
+F 1 "OPA1678" H 15258 1255 50  0000 L CNN
+F 2 "" H 15300 1300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1678.pdf" H 15300 1300 50  0001 C CNN
+	3    15300 1300
+	1    0    0    -1  
+$EndComp
+Text Notes 15000 950  0    50   ~ 0
+op versorgung +-12V\n
+$Comp
+L Device:R R?
+U 1 1 5E2B2007
+P 10400 950
+F 0 "R?" H 10470 996 50  0000 L CNN
+F 1 "16K" H 10470 905 50  0000 L CNN
+F 2 "" V 10330 950 50  0001 C CNN
+F 3 "~" H 10400 950 50  0001 C CNN
+	1    10400 950 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10100 950  10250 950 
+Wire Wire Line
+	10550 950  10750 950 
 $EndSCHEMATC
