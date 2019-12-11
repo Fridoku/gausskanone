@@ -1083,17 +1083,6 @@ $EndComp
 Wire Wire Line
 	8800 1050 9400 1050
 $Comp
-L Device:D_Photo D5
-U 1 1 5DF9DBF5
-P 12700 1650
-F 0 "D5" V 12604 1807 50  0000 L CNN
-F 1 "D_Photo" V 12695 1807 50  0000 L CNN
-F 2 "" H 12650 1650 50  0001 C CNN
-F 3 "~" H 12650 1650 50  0001 C CNN
-	1    12700 1650
-	0    1    1    0   
-$EndComp
-$Comp
 L Amplifier_Operational:OP249 U4
 U 1 1 5DF9FA70
 P 13400 1450
@@ -1129,17 +1118,6 @@ Wire Wire Line
 Connection ~ 12950 1050
 Wire Wire Line
 	12950 1050 13150 1050
-Wire Wire Line
-	12700 1750 12700 1900
-Wire Wire Line
-	12700 1900 12950 1900
-Wire Wire Line
-	12950 1900 12950 1550
-Wire Wire Line
-	12950 1550 13100 1550
-Connection ~ 12700 1900
-Wire Wire Line
-	12700 1900 12700 2200
 Wire Wire Line
 	13450 1050 13850 1050
 Wire Wire Line
@@ -1194,17 +1172,6 @@ F 3 "~" H 11200 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 11200 2200
-$Comp
-L Amplifier_Operational:OP249 U1
-U 1 1 5E0EE948
-P 11800 1050
-F 0 "U1" H 11800 1417 50  0000 C CNN
-F 1 "OP249" H 11800 1326 50  0000 C CNN
-F 2 "" H 11800 1050 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 11800 1050 50  0001 C CNN
-	1    11800 1050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11200 950  11200 1100
 Wire Wire Line
@@ -1230,14 +1197,10 @@ Wire Wire Line
 	13050 2400 14100 2400
 Wire Wire Line
 	14100 2400 14100 2550
-Connection ~ 12700 1450
-Wire Wire Line
-	12700 2200 12700 2500
 Wire Wire Line
 	12700 2500 13900 2500
 Wire Wire Line
 	13900 2500 13900 2550
-Connection ~ 12700 2200
 $Comp
 L Device:D D6
 U 1 1 5E19A7C7
@@ -1268,27 +1231,21 @@ $EndComp
 $Comp
 L Device:D D4
 U 1 1 5E04EA56
-P 14400 1200
-F 0 "D4" V 14446 1121 50  0000 R CNN
-F 1 "D" V 14355 1121 50  0000 R CNN
-F 2 "" H 14400 1200 50  0001 C CNN
-F 3 "~" H 14400 1200 50  0001 C CNN
-	1    14400 1200
+P 14500 1200
+F 0 "D4" V 14546 1121 50  0000 R CNN
+F 1 "D" V 14455 1121 50  0000 R CNN
+F 2 "" H 14500 1200 50  0001 C CNN
+F 3 "~" H 14500 1200 50  0001 C CNN
+	1    14500 1200
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	14400 1050 14300 1050
-Wire Wire Line
-	14300 1050 14300 2550
-Connection ~ 14400 1450
+Connection ~ 14500 1450
 Wire Wire Line
 	14500 1450 14500 2550
 Wire Wire Line
-	14400 1450 14500 1450
+	14500 1450 14500 1350
 Wire Wire Line
-	14400 1450 14400 1350
-Wire Wire Line
-	14250 1450 14400 1450
+	14250 1450 14500 1450
 $Comp
 L Amplifier_Operational:OP249 U6
 U 1 1 5E2071DA
@@ -1375,11 +1332,6 @@ Text Label 9950 1750 0    50   ~ 0
 ISO+12V
 Text Label 5650 950  0    50   ~ 0
 ISO60V
-Text Label 14400 850  1    50   ~ 0
-ISO+12V
-Wire Wire Line
-	14400 1050 14400 850 
-Connection ~ 14400 1050
 $Comp
 L Project:PA6582-AL L1
 U 2 1 5DFD9C3E
@@ -1537,7 +1489,7 @@ F 3 "~" H 14750 4800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9450 6200 11850 6200
+	9450 6200 10150 6200
 Text Label 10050 4200 1    50   ~ 0
 IGNITION
 Wire Wire Line
@@ -1576,10 +1528,6 @@ F 3 "~" H 15300 1250 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	15100 1150 14850 1150
-Wire Wire Line
-	14850 1150 14850 1050
-Wire Wire Line
-	14850 1050 14400 1050
 Wire Wire Line
 	15100 1350 15100 2200
 Wire Wire Line
@@ -1697,14 +1645,9 @@ F 3 "" H 10100 3200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9400 4400 10150 4400
-Wire Wire Line
 	11200 3900 11200 4400
 Wire Wire Line
 	10150 3350 10150 4400
-Connection ~ 10150 4400
-Wire Wire Line
-	10150 4400 11200 4400
 Wire Wire Line
 	9400 4500 9400 4400
 Wire Wire Line
@@ -1715,8 +1658,6 @@ Wire Wire Line
 Wire Wire Line
 	10150 2300 10050 2300
 Connection ~ 10050 2300
-Wire Wire Line
-	10150 4400 10150 4450
 Wire Wire Line
 	10050 4200 10050 3800
 Wire Wire Line
@@ -1749,4 +1690,39 @@ Wire Wire Line
 	10250 1750 10800 1750
 Wire Wire Line
 	10250 2100 10250 2200
+Wire Wire Line
+	9400 4400 11200 4400
+Wire Wire Line
+	10150 4400 10150 6200
+Connection ~ 10150 6200
+Wire Wire Line
+	10150 6200 11850 6200
+Wire Wire Line
+	12700 1550 13100 1550
+Wire Wire Line
+	12700 1550 12700 2500
+Wire Wire Line
+	14300 2550 14300 750 
+Wire Wire Line
+	14300 750  14500 750 
+Wire Wire Line
+	14850 750  14850 1150
+Text Label 14300 750  0    50   ~ 0
+ISO+12V
+Wire Wire Line
+	14500 1050 14500 750 
+Connection ~ 14500 750 
+Wire Wire Line
+	14500 750  14850 750 
+$Comp
+L Amplifier_Operational:OP249 U?
+U 2 1 5DFF519B
+P 11800 1050
+F 0 "U?" H 11800 1417 50  0000 C CNN
+F 1 "OP249" H 11800 1326 50  0000 C CNN
+F 2 "" H 11800 1050 50  0001 C CNN
+F 3 "http://www.analog.com/media/en/technical-documentation/data-sheets/OP249.pdf" H 11800 1050 50  0001 C CNN
+	2    11800 1050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
