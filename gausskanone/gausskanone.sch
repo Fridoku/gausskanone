@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:gausskanone-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
@@ -1317,7 +1317,7 @@ Wire Wire Line
 	7400 2000 7400 1900
 Connection ~ 7400 1900
 $Comp
-L Project:DPU01 U2
+L gausskanone-rescue:DPU01-Project U2
 U 1 1 5E021FEC
 P 10500 2700
 F 0 "U2" V 10396 1870 50  0000 R CNN
